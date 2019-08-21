@@ -4,22 +4,18 @@
 
 // RESET
 @import "base/reset/reset";
-    // si estamos utilizando IE
-    // @import "base/reset/normalize";
-
+// si estamos utilizando IE
+// @import "base/reset/normalize";
 
 // VARIABLES
 @import "lib/variables";
-
+@import "lib/mixins";
 
 // TIPOGRAFIA
 @import "base/tipografia";
 
-
 // LIB
-@import "lib/mixins";
 @import "lib/placeholders";
-
 
 // LINKS
 @import "base/links/botones";

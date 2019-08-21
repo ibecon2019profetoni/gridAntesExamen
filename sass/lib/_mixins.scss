@@ -1,3 +1,11 @@
 // *****************************
 // +++++++ $MIXINS ++++++
 // *****************************
+
+@mixin font($peso, $estilo, $tam, $colores) {
+  font-family: Arial, sans-serif;
+  font-weight: $peso;
+  font-style: $estilo;
+  font-size: $tam;
+  color: $colores;
+}

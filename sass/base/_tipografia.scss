@@ -1,5 +1,32 @@
-// *****************************
-// +++++++ $TIPOGRAFIA ++++++
-// *****************************
+/* *****************************
++++++++ $TIPOGRAFIA ++++++
+***************************** */
 
-
+// font(peso,estilo,tamaño,color)
+.registro {
+  // Arial Bold 40pt blanco
+  &__titulo {
+    @include font(bold, normal, 2.5rem, #fff);
+  }
+  // Arial Regular 17pt gris
+  &__parrafo {
+    @include font(normal, normal, 1.0625rem, $color_GrisOscuro);
+  }
+  &__formulario {
+    // Arial Regular 22pt gris
+    &__titulo {
+      @include font(normal, normal, 1.375rem, $color_GrisOscuro);
+    }
+    input {
+      @include font(normal, normal, 1.0625rem, $color_GrisOscuro);
+    }
+  }
+  // Arial Bold 22pt blanco
+  &__subtitulo {
+    @include font(bold, normal, 1.375rem, #fff);
+  }
+  // Arial Italic 34pt blanco
+  &__cuentaAtras {
+    @include font(normal, italic, 2.125rem, #fff);
+  }
+}

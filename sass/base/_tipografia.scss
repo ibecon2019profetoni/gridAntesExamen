@@ -20,6 +20,9 @@
     input {
       @include font(normal, normal, 1.0625rem, $color_GrisOscuro);
     }
+    &--boton {
+      @include font(bold, normal, 1.0625rem, $color_VerdeOscuro);
+    }
   }
   // Arial Bold 22pt blanco
   &__subtitulo {

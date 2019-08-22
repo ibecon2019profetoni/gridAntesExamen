@@ -122,6 +122,13 @@ table {
   font-size: 1.0625rem;
   color: #9b9fa4; }
 
+.registro__formulario--boton {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.0625rem;
+  color: #729c32; }
+
 .registro__subtitulo {
   font-family: Arial, sans-serif;
   font-weight: bold;
@@ -159,3 +166,51 @@ table {
     font-weight: 600; }
   .linksExternos__externo3 {
     font-weight: 300; }
+
+main .registro {
+  padding: 2rem 1rem;
+  background-color: #294a59;
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  grid-gap: 1rem;
+  grid-template-areas: "logo titulo titulo" "texto texto texto" "form form form" ". subtitulo ." ". fecha ."; }
+  @media screen and (min-width: 769px) {
+    main .registro {
+      grid-template-columns: 80px 720px 400px;
+      grid-template-areas: "logo titulo form" ". texto form" ". subtitulo form" ". fecha form";
+      -webkit-box-pack: center;
+              justify-content: center; } }
+  main .registro__logo {
+    grid-area: logo; }
+  main .registro__titulo {
+    grid-area: titulo;
+    align-self: end; }
+  main .registro__parrafo {
+    grid-area: texto; }
+  main .registro__formulario {
+    grid-area: form;
+    background-color: #ededf0;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    display: grid;
+    grid-row-gap: 1rem; }
+    main .registro__formulario__titulo {
+      justify-self: center; }
+    main .registro__formulario--nombre, main .registro__formulario--email {
+      padding: 0.5rem; }
+    main .registro__formulario--boton {
+      justify-self: center;
+      background-color: #9fd543;
+      border: 0;
+      border-bottom: 4px solid #729c32;
+      padding: 1rem 0;
+      width: 20%; }
+      @media screen and (min-width: 769px) {
+        main .registro__formulario--boton {
+          width: 50%; } }
+  main .registro__subtitulo {
+    grid-area: subtitulo;
+    justify-self: center; }
+  main .registro__cuentaAtras {
+    grid-area: fecha;
+    justify-self: center; }

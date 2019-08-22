@@ -1,3 +1,77 @@
 // *****************************
 // +++++++ $GRIDS ++++++
 // *****************************
+
+main {
+  .registro {
+    padding: 2rem 1rem;
+    background-color: $color_Turquesa;
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    grid-gap: 1rem;
+
+    grid-template-areas:
+      "logo titulo titulo"
+      "texto texto texto"
+      "form form form"
+      ". subtitulo ."
+      ". fecha .";
+    @media screen and (min-width: 769px) {
+      grid-template-columns: 80px 720px 400px;
+      grid-template-areas:
+        "logo titulo form"
+        ". texto form"
+        ". subtitulo form"
+        ". fecha form";
+
+      justify-content: center;
+    }
+    &__logo {
+      grid-area: logo;
+    }
+    &__titulo {
+      grid-area: titulo;
+      align-self: end;
+    }
+    &__parrafo {
+      grid-area: texto;
+    }
+    &__formulario {
+      grid-area: form;
+
+      background-color: $color_GrisMedio;
+      border-radius: 1rem;
+      padding: 2rem 1rem;
+      display: grid;
+      grid-row-gap: 1rem;
+
+      &__titulo {
+        justify-self: center;
+      }
+      &--nombre,
+      &--email {
+        padding: 0.5rem;
+      }
+      &--boton {
+        justify-self: center;
+        background-color: $color_VerdeMedio;
+        border: 0;
+        border-bottom: 4px solid $color_VerdeOscuro;
+        padding: 1rem 0;
+        width: 20%;
+
+        @media screen and (min-width: 769px) {
+          width: 50%;
+        }
+      }
+    }
+    &__subtitulo {
+      grid-area: subtitulo;
+      justify-self: center;
+    }
+    &__cuentaAtras {
+      grid-area: fecha;
+      justify-self: center;
+    }
+  }
+}
